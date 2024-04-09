@@ -1,15 +1,13 @@
 # IRP-Project-2
 
-## Instructions
-Note: This entire process requires having Tableau Desktop installed
+## Overview
+This dashboard was created to help users analyze two significant parts of financial outcomes related to higher education: earnings and debt. The data related to the debt were pulled from the [College Scorecard API]([url](https://collegescorecard.ed.gov/data/documentation/)) and [IPEDS]([url](https://nces.ed.gov/ipeds/datacenter/InstitutionByName.aspx?goToReportId=1&sid=041d0e65-3fab-4b03-be37-bb0bbbed43b8&rtid=1)) and the data related to earnings were pulled from [PSEO]([url](https://lehd.ces.census.gov/data/pseo_experimental.html)) (Post Secondary Earnigns Outcomes) databases from the US Federal Government. The storyboard explores these data in detail.
 
-1. Download the "Debt and Earnings for Publishing.twbx" and "R Script for Clustering in Tableau.R" files
-2. Open the .R file (preferably using [Rstudio](https://rstudio-education.github.io/hopr/starting.html)) and run the entire script
-3. Open the Tableau dashboard, and under the Help banner search "Manage Analytics Extension Connection" and click on it
-4. Under "Select a Connection Type" click on RServe
-5. Make sure "Require SSL" is unchecked
-6. In the "Hostname" box enter "localhost"
-7. In the "Port" box enter "6311"
-8. Select Test Connection to test the connection
-9. If that works, click on the box that says "Save"
-10. Enjoy K-means Clustering in Tableau!
+## K-Means Clustering Board
+The main standout feature of this dashboard is how it employs [K-means Clustering]([url](https://towardsdatascience.com/understanding-k-means-clustering-in-machine-learning-6a6e67336aa1)) so that the user can interact with the algorithm without coding experience in real time. The user can change the number of clusters, select points on the cluster scatterplot, map, and table of schools in real time and highlight those points. One important caveat is that due to the limitations of the data sources (due to privacy concerns), the only way to match the data are by the insitution. The debt rates only can be identified by school and not by major as the dashboard may suggest. This is a significant limitation, but it is still possible to compare schools to one another. The Research Brief document is an example of an analysis I was able to do for Georgia Tech.
+
+### Research Brief Summary
+The study investigates the financial outcomes of students from different universities, with a focus on Georgia Tech. Using datasets from the College Scorecard and the PSEO database, it employs k-means clustering to group schools based on similarities in earnings and debt repayment. Results indicate that Georgia Tech shares financial outcomes with several highly regarded public institutions, including esteemed "Public Ivy" institutions such as UVA and William & Mary, suggesting competition for jobs among graduates. The study identifies limitations such as the inability to perform one-to-one comparisons and missing data from certain states. Suggestions for future research include acquiring data for more precise comparisons and exploring employment outcomes. Overall, the study provides valuable insights into student financial success and implications for educational institutions.
+
+## Other Boards
+The other boards are focused mainly on visualizing from the College Scorecard API and PSEO data sources separately and were mainly intended for instiutional use.
